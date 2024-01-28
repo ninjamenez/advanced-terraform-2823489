@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    aws = {
+      version = "~> 3"
+      source = "hashicorp/aws"
+    }
+  }
+}
+
 # //////////////////////////////
 # VARIABLES
 # //////////////////////////////
@@ -10,7 +19,7 @@ variable "ssh_key_name" {}
 variable "private_key_path" {}
 
 variable "region" {
-  default = "us-east-2"
+  default = "us-west-2"
 }
 
 variable "vpc_cidr" {
